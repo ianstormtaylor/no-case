@@ -1,6 +1,6 @@
 {
   "name": "no-case",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Remove case from a string",
   "main": "no-case.js",
   "typings": "no-case.d.ts",
