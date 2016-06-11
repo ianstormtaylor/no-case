@@ -8,10 +8,10 @@ var TRAILING_DIGIT_REGEXP = require('./vendor/trailing-digit-regexp')
 /**
  * Sentence case a string.
  *
- * @param  {String} str
- * @param  {String} locale
- * @param  {String} replacement
- * @return {String}
+ * @param  {string} str
+ * @param  {string} locale
+ * @param  {string} replacement
+ * @return {string}
  */
 module.exports = function (str, locale, replacement) {
   if (str == null) {
@@ -20,8 +20,8 @@ module.exports = function (str, locale, replacement) {
 
   replacement = replacement || ' '
 
-  function replace (match, index, string) {
-    if (index === 0 || index === (string.length - match.length)) {
+  function replace (match, index, value) {
+    if (index === 0 || index === (value.length - match.length)) {
       return ''
     }
 
@@ -31,9 +31,9 @@ module.exports = function (str, locale, replacement) {
   str = String(str)
     // Support camel case ("camelCase" -> "camel Case").
     .replace(CAMEL_CASE_REGEXP, '$1 $2')
-    // Support camel case ("CAMELCase" -> "CAMEL Case").
+    // Support odd camel case ("CAMELCase" -> "CAMEL Case").
     .replace(CAMEL_CASE_CAPITAL_REGEXP, '$1 $2')
-    // Support digit groups ("test2012" -> "test 2012").
+    // Support digit groups ("123String" -> "123 String").
     .replace(TRAILING_DIGIT_REGEXP, '$1 $2')
     // Remove all non-word characters and replace with a single space.
     .replace(NON_WORD_REGEXP, replace)

@@ -12,21 +12,15 @@
   ],
   "scripts": {
     "lint": "standard",
-    "mocha": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
-    "test": "npm run build && npm run lint && npm run mocha",
-    "build": "node build.js",
-    "stage-vendor": "git add vendor"
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
+    "test": "npm run build && npm run lint && npm run test-cov",
+    "build": "node build.js"
   },
   "standard": {
     "ignore": [
       "coverage/**"
     ]
   },
-  "pre-commit": [
-    "build",
-    "stage-vendor",
-    "test"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/blakeembrey/sentence-case.git"
@@ -50,7 +44,6 @@
     "chai": "^1.9.1",
     "istanbul": "^0.3.5",
     "mocha": "^2.1.0",
-    "pre-commit": "^1.0.1",
     "standard": "^2.3.1",
     "xregexp": "^2.0.0"
   },

@@ -18,6 +18,7 @@ var TESTS = [
   ['testString123', 'test string 123'],
   ['anHTMLTag', 'an html tag'],
   ['ID123String', 'id123 string'],
+  ['Id123String', 'id 123 string'],
 
   // Constant case.
   ['CONSTANT_CASE ', 'constant case'],
@@ -56,7 +57,11 @@ var TESTS = [
   ['HELLO WORLD!', 'hello_world', null, '_'],
 
   // Custom locale.
-  ['A STRING', 'a strıng', 'tr']
+  ['A STRING', 'a strıng', 'tr'],
+
+  // https://github.com/blakeembrey/change-case/issues/21
+  ['amazon s3 data', 'amazon s3 data'],
+  ['foo_13_bar', 'foo 13 bar']
 ]
 
 describe('sentence case', function () {
