@@ -1,12 +1,12 @@
 {
-  "name": "sentence-case",
+  "name": "no-case",
   "version": "1.1.3",
-  "description": "Sentence case a string",
-  "main": "sentence-case.js",
-  "typings": "sentence-case.d.ts",
+  "description": "Remove case from a string",
+  "main": "no-case.js",
+  "typings": "no-case.d.ts",
   "files": [
-    "sentence-case.js",
-    "sentence-case.d.ts",
+    "no-case.js",
+    "no-case.d.ts",
     "vendor",
     "LICENSE"
   ],
@@ -23,12 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/blakeembrey/sentence-case.git"
+    "url": "git://github.com/blakeembrey/no-case.git"
   },
   "keywords": [
-    "sentence",
+    "no",
     "case",
-    "space"
+    "space",
+    "lower",
+    "trim"
   ],
   "author": {
     "name": "Blake Embrey",
@@ -37,9 +39,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blakeembrey/sentence-case/issues"
+    "url": "https://github.com/blakeembrey/no-case/issues"
   },
-  "homepage": "https://github.com/blakeembrey/sentence-case",
+  "homepage": "https://github.com/blakeembrey/no-case",
   "devDependencies": {
     "chai": "^1.9.1",
     "istanbul": "^0.3.5",
