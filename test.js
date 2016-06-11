@@ -16,6 +16,8 @@ var TESTS = [
   // Camel case.
   ['testString', 'test string'],
   ['testString123', 'test string 123'],
+  ['testString1_2_3', 'test string 1 2 3'],
+  ['x256', 'x 256'],
   ['anHTMLTag', 'an html tag'],
   ['ID123String', 'id123 string'],
   ['Id123String', 'id 123 string'],
@@ -23,10 +25,14 @@ var TESTS = [
   // Constant case.
   ['CONSTANT_CASE ', 'constant case'],
 
+  // Random cases.
+  ['FOO_bar', 'foo bar'],
+
   // Non-alphanumeric separators.
   ['dot.case', 'dot case'],
   ['path/case', 'path case'],
   ['snake_case', 'snake case'],
+  ['snake_case123', 'snake case 123'],
 
   // Punctuation.
   ['"quotes"', 'quotes'],
