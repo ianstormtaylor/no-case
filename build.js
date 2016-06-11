@@ -19,4 +19,5 @@ var write = function (file, regexp) {
 // Write regexps.
 write('non-word-regexp.js', new XRegExp('[^\\p{L}\\p{N}]+', 'g'))
 write('camel-case-regexp.js', new XRegExp('(\\p{Ll})([\\p{Lu}\\p{N}])', 'g'))
+write('camel-case-capital-regexp.js', new XRegExp('(\\p{Lu}+)(\\p{Lu}\\p{Ll})', 'g'))
 write('trailing-digit-regexp.js', new XRegExp('(\\p{N})(\\p{^N})', 'g'))

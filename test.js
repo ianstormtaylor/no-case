@@ -16,6 +16,11 @@ var TESTS = [
   // Camel case.
   ['testString', 'test string'],
   ['testString123', 'test string 123'],
+  ['anHTMLTag', 'an html tag'],
+  ['ID123String', 'id123 string'],
+
+  // Constant case.
+  ['CONSTANT_CASE ', 'constant case'],
 
   // Non-alphanumeric separators.
   ['dot.case', 'dot case'],

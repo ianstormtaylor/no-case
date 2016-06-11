@@ -2,6 +2,7 @@ var lowerCase = require('lower-case')
 
 var NON_WORD_REGEXP = require('./vendor/non-word-regexp')
 var CAMEL_CASE_REGEXP = require('./vendor/camel-case-regexp')
+var CAMEL_CASE_CAPITAL_REGEXP = require('./vendor/camel-case-capital-regexp')
 var TRAILING_DIGIT_REGEXP = require('./vendor/trailing-digit-regexp')
 
 /**
@@ -30,6 +31,8 @@ module.exports = function (str, locale, replacement) {
   str = String(str)
     // Support camel case ("camelCase" -> "camel Case").
     .replace(CAMEL_CASE_REGEXP, '$1 $2')
+    // Support camel case ("CAMELCase" -> "CAMEL Case").
+    .replace(CAMEL_CASE_CAPITAL_REGEXP, '$1 $2')
     // Support digit groups ("test2012" -> "test 2012").
     .replace(TRAILING_DIGIT_REGEXP, '$1 $2')
     // Remove all non-word characters and replace with a single space.
