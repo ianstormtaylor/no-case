@@ -13,7 +13,7 @@
   "scripts": {
     "lint": "standard",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
-    "test": "npm run build && npm run lint && npm run test-cov",
+    "test": "npm run lint && npm run test-cov",
     "build": "node build.js"
   },
   "standard": {
