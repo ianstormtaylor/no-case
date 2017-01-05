@@ -65,6 +65,7 @@ var TESTS = [
 
   // Custom replacement character
   ['HELLO WORLD!', 'hello_world', null, '_'],
+  ['foo bar!', 'foobar', null, ''],
 
   // Custom locale.
   ['A STRING', 'a strıng', 'tr'],
